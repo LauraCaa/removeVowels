@@ -7,13 +7,13 @@
   <body>
     <div  class="container">
       <h1>Vowel removal</h1>
-      <input type="text" id="text" placeholder="Write your text here...">
-      <button onclick="removeVowels()">Remove Vocales</button>
+      <input type="text" id="textInput" placeholder="Write your text here...">
+      <button id="removeButton">Remove Vocales</button>
       <p id="result"></p>
     </div>
   <script>
     function removeVowels() {
-      const input = document.getElementById('text').value;
+      const input = document.getElementById('textInput').value;
             
       if (input.trim() === "") {
         document.getElementById('result').textContent = "Enter a valid text";
@@ -22,6 +22,13 @@
         document.getElementById('result').textContent = `Result: ${resultText}`;
       }
     };
+
+    document.getElementById('removeButton').addEventListener('click', removeVowels);
+    document.getElementById('textInput').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        removeVowels();
+      }
+    });
   </script>
   </body>
 </html>
