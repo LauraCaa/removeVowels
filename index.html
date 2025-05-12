@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Vowel removal</title>
+    <link rel="stylesheet" href="styles.css"></head>
+  <body>
+    <div  class="container">
+      <h1>Vowel removal</h1>
+      <input type="text" id="text" placeholder="Write your text here...">
+      <button onclick="removeVowels()">Remove Vocales</button>
+      <p id="result"></p>
+    </div>
+  <script>
+    function removeVowels() {
+      const input = document.getElementById('text').value;
+            
+      if (input.trim() === "") {
+        document.getElementById('result').textContent = "Enter a valid text";
+      } else {
+        const resultText = input.replace(/[aeiouAEIOU]/g, '');
+        document.getElementById('result').textContent = `Result: ${resultText}`;
+      }
+    };
+  </script>
+  </body>
+</html>
