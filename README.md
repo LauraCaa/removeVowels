@@ -9,7 +9,21 @@ This project removes vowels from the input string using a JavaScript function an
 3. Type a string and click the "Remove Vowels" button.
 4. If the input is empty, a message will appear: "Enter a valid text".
 
+## ✨ Features
+
+- ✅ Remove vowels from any string input (both uppercase and lowercase)
+- ✅ Basic input validation (ignores empty strings)
+- ✅ Responsive UI with minimal HTML and CSS
+- ✅ Press **Enter** or click the **Remove Vowels** button
+  
 ## Technologies Used
 - HTML
 - CSS
 - JavaScript (Function to remove vowels)
+
+## 📁 Project Structure
+├── index.html # HTML structure
+├── styles.css # Basic styling (optional)
+└── script.js # JS logic to remove vowels
+
+
