@@ -1,34 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>Vowel removal</title>
-    <link rel="stylesheet" href="styles.css"></head>
-  <body>
-    <div  class="container">
-      <h1>Vowel removal</h1>
-      <input type="text" id="textInput" placeholder="Write your text here...">
-      <button id="removeButton">Remove Vocales</button>
-      <p id="result"></p>
-    </div>
-  <script>
-    function removeVowels() {
-      const input = document.getElementById('textInput').value;
-            
-      if (input.trim() === "") {
-        document.getElementById('result').textContent = "Enter a valid text";
-      } else {
-        const resultText = input.replace(/[aeiouAEIOU]/g, '');
-        document.getElementById('result').textContent = `Result: ${resultText}`;
-      }
-    };
+<head>
+  <meta charset="UTF-8" />
+  <title>Vowel Removal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Vowel Removal</h1>
+    <input type="text" id="textInput" placeholder="Write your text here..." />
+    <button id="removeButton">Remove Vowels</button>
+    <p id="result"></p>
+  </div>
 
-    document.getElementById('removeButton').addEventListener('click', removeVowels);
-    document.getElementById('textInput').addEventListener('keypress', function(event) {
-      if (event.key === 'Enter') {
-        removeVowels();
-      }
-    });
-  </script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
+
